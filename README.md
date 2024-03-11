@@ -24,3 +24,12 @@ Instruções:
 * Após a conclusão commitar o código em um repositório no GitHub e enviar o link para pdantas@ekan.com.br;
 * No repositório, criar um arquivo readme.md explicando como a aplicação foi desenvolvida e as instruções para executar o build.
 
+## Desenvolvimento do Projeto
+
+1. Foi criado o projeto no editor STS - Spring Tool Suite. Esse editor já tem integrado o Spring Initilizer. (https://start.spring.io/)
+2. Escolhi as dependências Spring Web, Spring Security, H2 Database. Como versão do Java, escolhi o Java 17.
+3. Já encontrei um problema com o componenente springfox para ser utilizado no Swagger. Spring Fox foi descontinuado e terei que usar o SpringDoc.
+Aqui é um grande problema que temos no Java, componentes que não foram migrados. Por conta disso as empresas continuam utilizando versões antigas do Java.
+Isso aconteceu muito no Delphi, o Delphi havia diversos componentes e muitas empresas se limitavam a ficar em versões mais antigas por conta de componentes.
+
+
