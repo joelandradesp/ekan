@@ -74,7 +74,4 @@ public class Beneficiario {
 	public void setDocumentos(List<Documento> documentos) {
 		this.documentos = documentos;
 	}
-
-	
-
 }
