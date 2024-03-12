@@ -1,5 +1,8 @@
 package br.com.joelandrade.avaliacaoekan.Repository;
 
-public class BeneficiarioRepository {
+import br.com.joelandrade.avaliacaoekan.domain.Beneficiario;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface BeneficiarioRepository extends JpaRepository<Beneficiario, Long>{
 
 }

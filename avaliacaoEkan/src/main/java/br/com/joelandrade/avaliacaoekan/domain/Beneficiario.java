@@ -15,6 +15,7 @@ import jakarta.persistence.TemporalType;
 public class Beneficiario {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
 	private String telefone;
     @Temporal(TemporalType.DATE)
     private Date dataNascimento;
@@ -27,7 +28,16 @@ public class Beneficiario {
     private List<Documento> documentos;
     
     private String nome;
-    public String getNome() {
+    
+    public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getNome() {
 		return nome;
 	}
 
