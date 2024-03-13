@@ -30,6 +30,80 @@ Instruções:
 2. Escolhi as dependências Spring Web, Spring Security, H2 Database. Como versão do Java, escolhi o Java 17.
 3. Já encontrei um problema com o componenente springfox para ser utilizado no Swagger. Spring Fox foi descontinuado e terei que usar o SpringDoc.
 Aqui é um grande problema que temos no Java, componentes que não foram migrados. Por conta disso as empresas continuam utilizando versões antigas do Java.
-Isso aconteceu muito no Delphi, o Delphi havia diversos componentes e muitas empresas se limitavam a ficar em versões mais antigas por conta de componentes.
+Isso aconteceu muito no Delphi, o ![Modelo de Dados.](/imagens/modelodados.jpg "Modelo de Dados.") ![Modelo de Dados.](/imagens/modelodados.jpg "Modelo de Dados.") 
+
+## Swagger
+
+![Swagger.](/imagens/Swagger.jpg.jpg "Swagger.") 
 
 
+## Postman
+
+![Postman Cadastrar.](/imagens/postman-cadastrar.jpg "Postman Cadastrar.") 
+
+## Endpoints:
+
+Swagger: http://localhost:8080/swagger-ui/index.html#
+
+Health Check Actuator: http://localhost:8080/actuator/health
+Health Check: http://localhost:8080/health/ready
+Health Check: http://localhost:8080/health/ready
+
+Cadastrar beneficiário e documentos: http://localhost:8080/api/beneficiarios/cadastrar
+
+Payload:
+
+```
+{
+    "nome":"Joel Alexandre",
+    "telefone": "11982429536",
+    "dataNascimento":"1977-01-22",
+    "dataAtualizacao":"2024-03-12",
+    "dataInclusao":"2024-03-12",
+     "documentos":[
+         {
+         "tipoDocumento":"RG",
+         "descricao": "RG",
+         "dataInclusao":"2024-03-12",
+         "dataAtualizacao":"2024-03-12"
+       },
+        {
+         "tipoDocumento":"CPF",
+         "descricao": "CPF",
+         "dataInclusao":"2024-03-12",
+         "dataAtualizacao":"2024-03-12"
+       }
+       ]
+}
+
+```
+
+Atualizar beneficiário e documentos: http://localhost:8080/api/beneficiarios/1
+
+```
+{  
+    "id":"1",
+    "nome":"Joel Alexandre Alexandre",
+    "telefone": "11982429536",
+    "dataNascimento":"1977-01-22",
+    "dataAtualizacao":"2024-03-12",
+    "dataInclusao":"2024-03-12",
+     "documentos":[
+         {
+         "tipoDocumento":"RG",
+         "descricao": "RG",
+         "dataInclusao":"2024-03-12",
+         "dataAtualizacao":"2024-03-12"
+       },
+        {
+         "tipoDocumento":"CPF",
+         "descricao": "CPF",
+         "dataInclusao":"2024-03-12",
+         "dataAtualizacao":"2024-03-12"
+       }
+       ]
+}
+
+```
+
+Deletar beneficiario e documentos: http://localhost:8080/api/beneficiarios/1
