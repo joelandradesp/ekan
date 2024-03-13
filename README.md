@@ -30,11 +30,11 @@ Instruções:
 2. Escolhi as dependências Spring Web, Spring Security, H2 Database. Como versão do Java, escolhi o Java 17.
 3. Já encontrei um problema com o componenente springfox para ser utilizado no Swagger. Spring Fox foi descontinuado e terei que usar o SpringDoc.
 Aqui é um grande problema que temos no Java, componentes que não foram migrados. Por conta disso as empresas continuam utilizando versões antigas do Java.
-Isso aconteceu muito no Delphi, o ![Modelo de Dados.](/imagens/modelodados.jpg "Modelo de Dados.") ![Modelo de Dados.](/imagens/modelodados.jpg "Modelo de Dados.") 
+
 
 ## Swagger
 
-![Swagger.](/imagens/Swagger.jpg.jpg "Swagger.") 
+![Swagger.](/imagens/Swagger.jpg "Swagger.") 
 
 
 ## Postman
@@ -46,7 +46,9 @@ Isso aconteceu muito no Delphi, o ![Modelo de Dados.](/imagens/modelodados.jpg "
 Swagger: http://localhost:8080/swagger-ui/index.html#
 
 Health Check Actuator: http://localhost:8080/actuator/health
+
 Health Check: http://localhost:8080/health/ready
+
 Health Check: http://localhost:8080/health/ready
 
 Cadastrar beneficiário e documentos: http://localhost:8080/api/beneficiarios/cadastrar
