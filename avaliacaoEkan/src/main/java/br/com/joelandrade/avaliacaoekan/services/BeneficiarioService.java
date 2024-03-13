@@ -1,18 +1,18 @@
 package br.com.joelandrade.avaliacaoekan.services;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-import br.com.joelandrade.avaliacaoekan.Repository.BeneficiarioRepository;
-import br.com.joelandrade.avaliacaoekan.domain.Beneficiario;
+import java.util.List;
 
-@Service
-public class BeneficiarioService {
+import br.com.joelandrade.avaliacaoekan.domain.Beneficiario;
+import br.com.joelandrade.avaliacaoekan.domain.Documento;
+import br.com.joelandrade.avaliacaoekan.dtos.BeneficiarioComDocumentosDTO;
+
+public interface BeneficiarioService {
 	
-	@Autowired
-	private BeneficiarioRepository beneficiarioRepository;
-	
-	public void cadastrarBeneficiarioComDocumentos(Beneficiario beneficiario) {
-		beneficiarioRepository.save(beneficiario);
-	}
+	List<Beneficiario> listarTodos();
+    List<Beneficiario> listarBeneficiarios();
+    List<Documento> listarDocumentosPorBeneficiario(Long beneficiarioId);
+    List<BeneficiarioComDocumentosDTO> listarBeneficiariosComDocumentos();
+    Beneficiario atualizarBeneficiario(Long beneficiarioId, Beneficiario novoBeneficiario);
+    void removerBeneficiario(Long beneficiarioId);
 
 }
