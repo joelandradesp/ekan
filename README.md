@@ -56,6 +56,7 @@ Cadastrar beneficiário e documentos: http://localhost:8080/api/beneficiarios/ca
 Payload:
 
 ```
+
 {
     "nome":"Joel Alexandre",
     "telefone": "11982429536",
@@ -80,28 +81,55 @@ Payload:
 
 ```
 
-Atualizar beneficiário e documentos: http://localhost:8080/api/beneficiarios/1
-
 ```
-{  
-    "id":"1",
-    "nome":"Joel Alexandre Alexandre",
-    "telefone": "11982429536",
-    "dataNascimento":"1977-01-22",
+
+{
+    "nome":"Simone Cordeiro",
+    "telefone": "1134343244",
+    "dataNascimento":"1979-04-12",
     "dataAtualizacao":"2024-03-12",
     "dataInclusao":"2024-03-12",
      "documentos":[
          {
          "tipoDocumento":"RG",
          "descricao": "RG",
-         "dataInclusao":"2024-03-12",
-         "dataAtualizacao":"2024-03-12"
+         "dataInclusao":"2024-03-13",
+         "dataAtualizacao":"2024-03-13"
        },
         {
          "tipoDocumento":"CPF",
          "descricao": "CPF",
-         "dataInclusao":"2024-03-12",
-         "dataAtualizacao":"2024-03-12"
+         "dataInclusao":"2024-03-13",
+         "dataAtualizacao":"2024-03-13"
+       }
+       ]
+}
+
+```
+
+Atualizar beneficiário e documentos: http://localhost:8080/api/beneficiarios/1
+Atualizar beneficiário e documentos: http://localhost:8080/api/beneficiarios/2
+
+![Postman Atualizar.](/imagens/postman-atualizacao.jpg "Postman Atualizar.") 
+
+```
+  
+  {  
+    "id":"1",
+    "nome":"Joel Alexandre Matusevicius Alexandre",
+    "telefone": "11982429536",
+    "dataNascimento":"1977-01-22",
+    "dataAtualizacao":"2024-03-13",
+     "documentos":[
+         {
+         "tipoDocumento":"RG",
+         "descricao": "RG",
+         "dataAtualizacao":"2024-03-13"
+       },
+        {
+         "tipoDocumento":"CPF",
+         "descricao": "CPF",
+         "dataAtualizacao":"2024-03-13"
        }
        ]
 }
@@ -109,3 +137,17 @@ Atualizar beneficiário e documentos: http://localhost:8080/api/beneficiarios/1
 ```
 
 Deletar beneficiario e documentos: http://localhost:8080/api/beneficiarios/1
+
+![Postman Deletar.](/imagens/postman-delete.jpg "Postman Deletar.")
+
+Busca Beneficiario + Documento por Id: http://localhost:8080/api/beneficiarios/1
+
+![Postman Get por id.](/imagens/postman-getporid.jpg "Postman Get por id.")
+
+Busca Somente Documentos por Id Beneficiário: http://localhost:8080/api/beneficiarios/1/documentos
+
+![Postman Somente Documentos Id.](/imagens/postman-somentedocumentosid.jpg "Postman Somente Documentos Id.")
+
+Busca sem filtros: http://localhost:8080/api/beneficiarios
+
+![Postman Busca sem filtro.](/imagens/postman-buscarsemfiltro.jpg "Postman Busca sem filtro.") 
