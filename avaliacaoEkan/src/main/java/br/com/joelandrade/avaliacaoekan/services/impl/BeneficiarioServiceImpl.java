@@ -3,17 +3,13 @@ package br.com.joelandrade.avaliacaoekan.services.impl;
 import java.util.Date;
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
 import br.com.joelandrade.avaliacaoekan.Repository.BeneficiarioRepository;
 import br.com.joelandrade.avaliacaoekan.Repository.DocumentoRepository;
 import br.com.joelandrade.avaliacaoekan.domain.Beneficiario;
 import br.com.joelandrade.avaliacaoekan.domain.Documento;
-import br.com.joelandrade.avaliacaoekan.dtos.BeneficiarioComDocumentosDTO;
 import br.com.joelandrade.avaliacaoekan.services.BeneficiarioService;
 
 @Service
@@ -89,16 +85,4 @@ public class BeneficiarioServiceImpl implements BeneficiarioService {
 	        beneficiarioRepository.delete(beneficiario);
 		}
 	}
-
-	@Override
-	 public List<BeneficiarioComDocumentosDTO> listarBeneficiariosComDocumentos() {
-        List<Beneficiario> beneficiarios = beneficiarioRepository.findAll();
-        return beneficiarios.stream()
-                .map(beneficiario -> new BeneficiarioComDocumentosDTO(
-                		 beneficiario.getId(),
-                         beneficiario.getNome(),
-                         beneficiario.getDocumentos()
-                ))
-                .collect(Collectors.toList());
-    }
 }
