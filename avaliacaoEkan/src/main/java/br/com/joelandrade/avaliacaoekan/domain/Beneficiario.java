@@ -20,6 +20,7 @@ public class Beneficiario {
 	@GeneratedValue(generator = "beneficiario_seq", strategy = GenerationType.SEQUENCE)
 	@SequenceGenerator(name = "beneficiario_seq", sequenceName = "beneficiario_sequence", initialValue = 1,allocationSize = 1)
 	private Long id;
+    private String nome;
 	private String telefone;
     @Temporal(TemporalType.DATE)
 	private Date dataNascimento;
@@ -30,8 +31,6 @@ public class Beneficiario {
 
     @OneToMany(mappedBy = "beneficiario", fetch = FetchType.EAGER)
     private List<Documento> documentos;
-    
-    private String nome;
     
     public Long getId() {
 		return id;
@@ -92,7 +91,6 @@ public class Beneficiario {
 	
 	public Beneficiario toBeneficiario() {
 		Beneficiario beneficiario = new Beneficiario();
-
 		beneficiario.setNome(this.nome);
 		beneficiario.setTelefone(this.telefone);
 		beneficiario.setDataNascimento(dataNascimento);

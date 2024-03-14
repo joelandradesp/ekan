@@ -13,10 +13,8 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
 import br.com.joelandrade.avaliacaoekan.domain.Beneficiario;
 import br.com.joelandrade.avaliacaoekan.domain.Documento;
-import br.com.joelandrade.avaliacaoekan.dtos.BeneficiarioComDocumentosDTO;
 import br.com.joelandrade.avaliacaoekan.services.impl.BeneficiarioServiceImpl;
 import io.swagger.v3.oas.annotations.Operation;
 
@@ -49,7 +47,7 @@ public class BeneficiarioController {
 	}
 
 	@GetMapping(path = "/{beneficiarioId}/documentos")
-	@Operation(summary = "Listar Documentos por Id")
+	@Operation(summary = "Listar somente os Documentos filtrado por id do beneficiário")
 	public List<Documento> listarDocumentosPorBeneficiario(@PathVariable Long beneficiarioId) {
 		return beneficiarioService.listarDocumentosPorBeneficiario(beneficiarioId);
 	}
@@ -73,9 +71,4 @@ public class BeneficiarioController {
 		beneficiarioService.removerBeneficiario(beneficiarioId);
 	}
 
-	@GetMapping("/com-documentos")
-	@Operation(summary = "Listar Beneficiarios com Documentos")
-	public List<BeneficiarioComDocumentosDTO> listarBeneficiariosComDocumentos() {
-		return beneficiarioService.listarBeneficiariosComDocumentos();
-	}
 }

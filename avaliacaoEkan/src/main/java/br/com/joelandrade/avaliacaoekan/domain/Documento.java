@@ -89,5 +89,4 @@ public class Documento {
 		documento.setDataAtualizacao(this.dataAtualizacao);
 		return documento;
 	}
-
 }
