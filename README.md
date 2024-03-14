@@ -31,7 +31,7 @@ Instruções:
 3. Já encontrei um problema com o componenente springfox para ser utilizado no Swagger. Spring Fox foi descontinuado e terei que usar o SpringDoc.
 Aqui é um grande problema que temos no Java, componentes que não foram migrados. Por conta disso as empresas continuam utilizando versões antigas do Java.
 
-| Left columns  | Right columns |
+| Descrição  | Detalhes |
 | ------------- |:-------------:|
 | Versão do Java      | 17     |
 | Spring Boot     | 3.2.3     |
