@@ -2,7 +2,8 @@ package br.com.joelandrade.avaliacaoekan.domain;
 
 import java.util.Date;
 
-import jakarta.persistence.Column;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -29,6 +30,7 @@ public class Documento {
 
 	@ManyToOne
 	@JoinColumn(name = "beneficiario_id", nullable = false)
+	@JsonIgnore
 	private Beneficiario beneficiario;
 
 	public Long getId() {
